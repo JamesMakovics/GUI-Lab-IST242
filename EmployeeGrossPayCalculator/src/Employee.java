@@ -33,7 +33,7 @@ public class Employee{
 
 			payRate = hoursWorked = grossPay = overTimeHour = overTimePay = regularPay = grossPay = 0;
 
-	}// End of constructor
+	}// End of Employee constructor
 
 // Overrides toString() method to return employee information
 
@@ -45,7 +45,7 @@ public class Employee{
 
 				"\n Over Time Hour: " + overTimeHour + "\n Regular Pay: " + regularPay +
 
-				"\n Over Time Pay" + overTimePay + "\n Gross Pay: " + grossPay;
+				"\n Over Time Pay: " + overTimePay + "\n Gross Pay: " + grossPay;
 
 		}// End of method
 
@@ -53,11 +53,11 @@ public class Employee{
 
 	void calculate(){
 
-// Checks if the hours worked is greater than 40 which is regular hour
+// Compares if the employee worked over 40 hours
 
 		if(hoursWorked > 40)
 
-// Calculates over time
+// Calculates over time for the employee
 
 			overTimeHour = hoursWorked - 40;
 

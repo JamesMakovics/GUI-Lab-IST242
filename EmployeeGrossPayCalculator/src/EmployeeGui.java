@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class EmployeeGui {
 
-// Declares employee class array of objects
+// Declares employee array of objects
 
 	Employee emp[];
 
@@ -14,9 +14,9 @@ public class EmployeeGui {
 
 	EmployeeGui(){
 
-// Calls the method to read the file contents and store it in employee array of objects
+// Calls the read file method to read the file contents and store it in the employee array
 
-readFile("C:\\Users\\delta\\Documents\\GitHub\\GUI-Lab-IST242\\Employees.txt");
+readFile("C:\\Users\\James\\Documents\\GitHub\\GUI-Lab-IST242\\Employees.txt");
 
 // Calls the function accept employee information
 
@@ -44,7 +44,7 @@ void readFile(String fileName){
 
 		int no = 0;
 
-// Loops till end of the file
+// Loops till end
 
 		while(sc.hasNext()){
 
@@ -58,7 +58,7 @@ void readFile(String fileName){
 
 		}// End of while loop
 
-// Close the file
+// Closes the file
 
 		sc.close();
 
@@ -70,7 +70,7 @@ void readFile(String fileName){
 
 		emp = new Employee[no];
 
-// Loops till number of records
+// Loops till end of records
 
 		for(int c = 0; c < no; c++)
 
@@ -78,7 +78,7 @@ void readFile(String fileName){
 
 			emp[c] = new Employee();
 
-// Reset the record counter to zero`
+// Reset the record counter to zero
 
 		no = 0;
 
@@ -113,19 +113,19 @@ void readFile(String fileName){
 
 		sc.close();
 
-}// End of try block
+}// End of try method
 
-// Catch block to handle FileNotFoundException exception
+// Catch method to handle FileNotFoundException exception
 
 	catch(FileNotFoundException fe){
 
 		fe.printStackTrace();
 
-		}// End of catch block
+		}// End of catch exception
 
 	}// End of method
 
-// Method to accept data from the user
+// Method that accepts input from the user
 
 	void acceptData(){
 
@@ -137,27 +137,27 @@ void readFile(String fileName){
 
 		do{
 
-// Sets the found status to zero for each id entered by the user
+// Sets the found status to zero for id entered by the user
 
 			found = 0;
 
-// Accept the id from the user
+// Accepts input id from the user
 
 			String id = JOptionPane.showInputDialog("Enter ID");
 
-// Loops till end of the record
+// Loops till end of the array
 
 			for(x = 0; x < emp.length; x++){
 
-// Checks current employee id with user entered id
+// Compares employee's id with user input id
 
 				if(emp[x].id.equalsIgnoreCase(id)){
 
-// Set the found status to one for found
+// Set the found status to one
 
 					found = 1;
 
-// Come out of the for loop
+// End of the for loop
 
 					break;
 
@@ -169,19 +169,19 @@ void readFile(String fileName){
 
 			if(found == 0)
 
-// Displays error message
+// Displays error message "Employee ID is not found"
 
-				JOptionPane.showMessageDialog(null, "ID not found. \nPlease reenter", "ERROR", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "ID not found. \nPlease re-enter", "ERROR", JOptionPane.INFORMATION_MESSAGE);
 
-// Otherwise, record found
+// Else record is found
 
 			else{
 
-// Accept the date
+// Accepts the date
 
 				String date = JOptionPane.showInputDialog("Enter Pay Period End Date.");
 
-// Accepts the hours worked
+// Accepts the hours worked by employee
 
 				double work = Double.parseDouble(JOptionPane.showInputDialog("Enter Hours Worked."));
 
@@ -190,7 +190,7 @@ void readFile(String fileName){
 				emp[x].payPeriodEndDate = date;
 				emp[x].hoursWorked = work;
 
-// Calls the method to calculate gross pay for the found record
+// Calls the method calculate to figure out gross pay for the found record
 
 				emp[x].calculate();
 
@@ -198,7 +198,7 @@ void readFile(String fileName){
 
 				JOptionPane.showMessageDialog(null, emp[x], "Employee Information.", JOptionPane.INFORMATION_MESSAGE);
 
-// Come out of the while loop
+// End of the while loop
 
 				break;
 
@@ -206,7 +206,7 @@ void readFile(String fileName){
 
 		}while(true); // End of do - while loop
 
-	}// End of method
+	}// End of acceptData method
 
 // main method definition
 
@@ -216,6 +216,6 @@ void readFile(String fileName){
 
 		new EmployeeGui();
 
-		}// End of main method
+		}// End of main
 
-	}// End of driver class
+	}// End of EmployeeGui class
