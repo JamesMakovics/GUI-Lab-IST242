@@ -2,6 +2,9 @@ import java.io.*;
 import java.util.*;
 import javax.swing.*;
 
+//author James Makovics and Tony Feliciano
+
+
 // Driver class EmployeeGui definition
 
 public class EmployeeGui {
@@ -16,7 +19,7 @@ public class EmployeeGui {
 
 // Calls the read file method to read the file contents and store it in the employee array
 
-readFile("C:\\Users\\James\\Documents\\GitHub\\GUI-Lab-IST242\\Employees.txt");
+readFile("C:\\Users\\delta\\Documents\\GitHub\\GUI-Lab-IST242\\Employees.txt"); //Employees File Path Goes HERE!
 
 // Calls the function accept employee information
 

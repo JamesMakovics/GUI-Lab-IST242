@@ -1,28 +1,21 @@
+//author James Makovics and Tony Feliciano
+
 
 // Class Employee definition
 
 public class Employee{
-
+	
 // Instance variables to store data
 
 	String id;
-
 	String firstName;
-
 	String lastName;
-
 	double payRate;
-
 	String payPeriodEndDate;
-
 	double hoursWorked;
-
 	double grossPay;
-
 	double overTimeHour;
-
 	double overTimePay;
-
 	double regularPay;
 
 // Default constructor to initialize instance variables
